@@ -18,6 +18,16 @@ export default {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
       },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' }
+        }
+      },
+      animation: {
+        'marquee': 'marquee 30s linear infinite',
+        'marquee-reverse': 'marquee 30s linear infinite reverse'
+      },
       transitionTimingFunction: {
         'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
       },
