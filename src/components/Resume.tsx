@@ -41,7 +41,7 @@ export default function Resume() {
           </li>
         </ol>
       </section>
-      
+
 
       {/* Education Section */}
       <section className="timeline-section">
@@ -53,23 +53,52 @@ export default function Resume() {
         </div>
 
         <ol className="timeline-list">
-          <li className="timeline-item">
-            <h4 className="timeline-title">Pashchimanchal Campus, Tribhuvan University</h4>
-            <span className="timeline-period">2021 - 2025 | Pokhara, Nepal</span>
-            <div className="timeline-text">
-              <p><strong>Key Subjects:</strong> Data Structures and Algorithms, Computer Networks, Digital Logic, Operating Systems, Software Engineering, Microprocessors</p>
-              <p><strong>Advance Courses:</strong> Database Management System, Computer Organization & Architecture, Artificial Intelligence</p>
-              <p><strong>Extracurricular Activities:</strong> Participated in tech-related workshops and hackathons, worked on multiple team-based projects.</p>
-            </div>
-          </li>
+         <li className="timeline-item">
+  <h4 className="timeline-title">Pashchimanchal Campus, Tribhuvan University</h4>
+  <span className="timeline-period">2021 - 2025 | Pokhara, Nepal</span>
+  <div className="timeline-text">
+    
+    <p><strong>Major Subjects:</strong> 
+      Data Structures & Algorithms, Operating Systems, Computer Networks, Digital Logic, Microprocessors, Software Engineering 
+    </p>
+
+    <p><strong>Advanced Courses:</strong> 
+      Artificial Intelligence, Database Management Systems, Distributed Systems, Simulation & Modeling 
+    </p>
+
+    <p><strong>Electives:</strong> 
+      Enterprise Computing, Big Data, Multimedia Technologies
+    </p>
+    <p>
+    <strong>Software Engineering Project:</strong>  
+    Zero Waste Kitchen – A Flutter app promoting food sustainability and waste reduction
+    </p>
+
+    <p>
+    <strong>Minor Project:</strong>  
+    Blood Donation Management Application
+    </p>
+
+    <p>
+    <strong>Major Project:</strong>  
+    NepaliVision+ – Enhancing accessibility of visual content through AI-generated Nepali captions and natural speech synthesis.
+    </p>
+
+    <p><strong>Extracurricular Activities:</strong>  
+      Lead the Computer Club(i-CES) under the Department of Computer Engineering.<br></br>Organized and participated in tech-related workshops, hackathons, and coding competitions. <br></br> Lead the Volunteers and assisted the Technical team of college in organizing the <strong>15th IOE Graduate Conference at IOE Pashchimancal Campus. </strong>
+    </p>
+  </div>
+</li>
+
 
           <li className="timeline-item">
             <h4 className="timeline-title">Gorkha Secondary School</h4>
             <span className="timeline-period">2018 - 2020 | Tulsipur Dang, Nepal</span>
             <div className="timeline-text">
               <p><strong>GPA:</strong> 3.85/4.0</p>
-              <p><strong>Subjects Studied:</strong> Mathematics, Physics, Chemistry, Computer Science, and English</p>
+              <p><strong>Subjects Studied:</strong> Mathematics, Physics, Chemistry, Biology, and English</p>
               <p><strong>Achievements:</strong> Excelled in STEM subjects with a strong foundation in analytical and problem-solving skills.</p>
+              <p><strong>Extracurricular Activities:</strong> Supported in the organization of the Annual Festival of School</p>
             </div>
           </li>
         </ol>
@@ -89,12 +118,12 @@ export default function Resume() {
             <h4 className="timeline-title">Innovative Computer Engineering Students' Society</h4>
             <span className="timeline-period">March 2022 - February 2025 | Pashchimanchal Campus, Pokhara, Nepal</span>
             <div className="timeline-text">
-              <p>Led a team of 20+ members in organizing technical events and workshops.</p>
+              <p>As the <strong>President</strong> of the club, I led a team of 20+ members in organizing technical events and workshops.</p>
               <p>Organized and conducted multiple coding workshops, competitions, and hackathons.</p>
-              <p>Led 'Call For Enthusiast' - a month-long technical training program teaching popular tech stacks to college students, for 3 years.</p>
-              <p>Initiated and led 'AI Bootcamp' - a year-long machine learning and deep learning mentorship program.</p>
+              <p>Led <strong>Call For Enthusiast</strong> - a month-long technical training program teaching popular tech stacks to college students, for 3 years.</p>
+              <p>Initiated and led <strong>AI Bootcamp</strong> - a year-long machine learning and deep learning mentorship program.</p>
               <p>Increased student participation in technical activities by 123%.</p>
-              <p>Successfully organized EthosHack, a 24-hour regional cultural hackathon.</p>
+              <p>Successfully organized <strong>EthosHack</strong>, a 24-hour regional cultural hackathon.</p>
               <p>Mentored around 100 students in Flutter development through structured training programs.</p>
             </div>
           </li>

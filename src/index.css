@@ -86,15 +86,51 @@ main {
 
 .avatar-box {
   @apply relative mb-6 overflow-hidden;
+  padding: 2px; /* Space for border */
+}
+
+.avatar-box::before {
+  content: '';
+  @apply absolute inset-0 rounded-2xl;
+  background: linear-gradient(
+    45deg,
+    transparent 40%,
+    var(--accent) 45%,
+    var(--primary-light) 55%,
+    transparent 60%
+  );
+  background-size: 250% 250%;
+  animation: borderRotate 3s linear infinite;
+}
+
+.avatar-box::after {
+  content: '';
+  @apply absolute inset-[2px] rounded-2xl bg-surface;
+  /* This creates the gap between image and border */
 }
 
 .avatar-box img {
-  @apply w-32 h-32 rounded-2xl object-cover mx-auto;
+  @apply relative z-10 w-32 h-32 rounded-2xl object-cover mx-auto;
   transition: transform 0.3s ease;
 }
 
+/* Add the border rotation animation */
+@keyframes borderRotate {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 200% 200%;
+  }
+}
+
+/* Optional: Add hover effect */
+.avatar-box:hover::before {
+  animation-duration: 2s; /* Speed up animation on hover */
+}
+
 .avatar-box:hover img {
-  transform: scale(1.05);
+  transform: scale(1.02); /* Subtle zoom on hover */
 }
 
 .info-content {
