@@ -176,15 +176,26 @@ const CertificateCard = ({ certificate, index }: { certificate: Certificate; ind
             style={{ 
               backgroundColor: `white`,
               borderColor: `${certificate.color}`,
-              borderRadius: '8px',
+              borderRadius: '12px',
               padding: '5px',
-              borderWidth: '8px'
+              borderWidth: '8px',
+              width: '56px',
+              height: '56px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              overflow: 'hidden'
             }}
           >
             <img 
               src={certificate.issuerLogo} 
               alt={`${certificate.issuer} logo`} 
               className="cert-issuer-logo"
+              style={{
+                width: '32px',
+                height: '32px',
+                objectFit: 'cover'
+              }}
             />
           </div>
           <div className="cert-title-container">
@@ -309,7 +320,7 @@ export default function About() {
             <ServiceCard 
               icon={FaFlutter}
               title="Cross-Platform Development"
-              description='Build beautiful apps for iOS & Android with <strong className="text-blue-400">Dart & Flutter</strong>.'
+              description='Build beautiful apps for iOS & Android with <span class="text-blue-400 font-semibold">Dart & Flutter</span>.'
               color="bg-blue-500/80"
               index={0}
             />
@@ -317,7 +328,7 @@ export default function About() {
             <ServiceCard 
               icon={FaSwift}
               title="Native iOS Development"
-              description='Crafting high-performance, elegant iOS apps using <strong className="text-orange-400">Swift & SwiftUI</strong>.'
+              description='Crafting high-performance, elegant iOS apps using <span class="text-orange-400 font-semibold">Swift & SwiftUI</span>.'
               color="bg-orange-500/80"
               index={1}
             />
@@ -325,7 +336,7 @@ export default function About() {
             <ServiceCard 
               icon={FaPython}
               title="Backend Development"
-              description='Building secure & scalable backends using <strong className="text-green-400">Django & FastAPI</strong>.'
+              description='Building secure & scalable backends using <span class="text-green-400 font-semibold">Django & FastAPI</span>.'
               color="bg-green-600/80"
               index={2}
             />
