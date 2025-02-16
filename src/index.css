@@ -103,6 +103,8 @@ color: var(--accent);
 .avatar-box {
   @apply relative mb-6 overflow-hidden;
   padding: 2px; /* Space for border */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
 }
 
 .avatar-box::before {
@@ -128,6 +130,7 @@ color: var(--accent);
 .avatar-box img {
   @apply relative z-10 w-32 h-32 rounded-2xl object-cover mx-auto;
   transition: transform 0.3s ease;
+  /* transform: scale(1.02); */
 }
 
 /* Add the border rotation animation */
@@ -136,19 +139,32 @@ color: var(--accent);
     background-position: 0% 0%;
   }
   100% {
-    background-position: 200% 200%;
+    background-position: 250% 250%;
   }
 }
 
 /* Optional: Add hover effect */
 .avatar-box:hover::before {
-  animation-duration: 2s; /* Speed up animation on hover */
+  animation-duration: 2s;
+}
+
+.avatar-box {
+  position: relative; /* Ensure the container has a relative position */
+  z-index: 1; /* Bring the image above the background */
+  
+}
+.avatar-box img {
+  width: 75%; /* Make the image fill the width of the container */
+  height: 75%; /* Make the image fill the height of the container */
+  object-fit: cover; /* Ensure the image covers the box while maintaining aspect ratio */
 }
 
 .avatar-box:hover img {
-  transform: scale(1.02); /* Subtle zoom on hover */
-}
+  transform: scale(1.1) translateY(10px); /* Apply both scaling and translation */
+  transition: transform 0.3s ease;
+  position: relative; /* Make sure the image stays on top of the background */
 
+}
 .info-content {
   @apply text-center mb-6;
 }

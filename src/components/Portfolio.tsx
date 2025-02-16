@@ -46,6 +46,29 @@ const projects: Project[] = [
     tags: ["Flutter", "Coding", "Gamification", "i-CES"]
   },
   {
+    title: "ShopSphere",
+    category: "flutter",
+    image: "./src/assets/images/projects/shopsphere.png",
+    link: "https://github.com/ShishirRijal/ShopSphere",
+    description: "A feature-rich e-commerce application built with Flutter and Firebase, implementing Clean Architecture principles.",
+    technologies: ["Flutter", "Firebase", "Provider", "Clean Architecture"],
+    startDate: "2023-09-01",
+    endDate: "2024-01-31",
+    publishedAt: "2024-01-31",
+    summary: "A feature-rich e-commerce application built with Flutter and Firebase, implementing Clean Architecture principles. This project demonstrates modern app development patterns, SOLID principles, and best practices in mobile development.",
+    tags: ["Flutter", "Firebase", "Clean Architecture", "Provider", "Mobile Development"],
+    images: [
+      { url: "./src/assets/images/projects/shopsphere.png", alt: "ShopSphere" }, 
+    ],
+    features: [
+      "Dual role support (Admin/Customer)",
+      "Product browsing with infinite scroll",
+      "Cart Management",
+      "Checkout & Orders",
+      "Admin Panel"
+    ]
+  }, 
+  {
     title: "Budget Tracker",
     category: "flutter",
     image: "./src/assets/images/projects/budget-tracker.png",
@@ -195,29 +218,7 @@ const projects: Project[] = [
       "Exception Handling"
     ]
   },
-  {
-    title: "ShopSphere",
-    category: "flutter",
-    image: "./src/assets/images/projects/shopsphere.png",
-    link: "https://github.com/ShishirRijal/ShopSphere",
-    description: "A feature-rich e-commerce application built with Flutter and Firebase, implementing Clean Architecture principles.",
-    technologies: ["Flutter", "Firebase", "Provider", "Clean Architecture"],
-    startDate: "2023-09-01",
-    endDate: "2024-01-31",
-    publishedAt: "2024-01-31",
-    summary: "A feature-rich e-commerce application built with Flutter and Firebase, implementing Clean Architecture principles. This project demonstrates modern app development patterns, SOLID principles, and best practices in mobile development.",
-    tags: ["Flutter", "Firebase", "Clean Architecture", "Provider", "Mobile Development"],
-    images: [
-      { url: "./src/assets/images/projects/shopsphere.png", alt: "ShopSphere" }, 
-    ],
-    features: [
-      "Dual role support (Admin/Customer)",
-      "Product browsing with infinite scroll",
-      "Cart Management",
-      "Checkout & Orders",
-      "Admin Panel"
-    ]
-  }, 
+
   {
     title: "Hack and Hunt Backend",
     category: "python",
@@ -283,14 +284,97 @@ const projects: Project[] = [
     images: [
       { url: "./src/assets/images/projects/inbrowser_proctoring.png", alt: "In-Browser Proctoring" }, 
     ],  
-    
+
     startDate: "2024-10-05",
     endDate: "2024-10-30",
     publishedAt: "2024-11-01",
     summary: "A real-time proctoring system to ensure academic integrity in online examinations through AI-powered monitoring.",
     tags: ["Proctoring", "AI", "Computer Vision", "Face Recognition", "Django", "Deep Learning"]
-  }
+  },
 
+  {
+    title: "iWrite",
+    category: "flutter",
+    image: "./src/assets/images/projects/iwrite.png",
+    link: "https://github.com/ShishirRijal/iWrite",
+    description: "A Flutter-based blog application implementing Clean Architecture, featuring user authentication, blog creation, offline support, and local data caching.",
+    technologies: ["Flutter", "Supabase", "Hive", "GetIt"],
+    features: [
+      "User authentication (Login/Signup)",
+      "Create and read blog posts",
+      "Online/offline support with caching",
+      "Functional programming with Either",
+      "Exception handling with Clean Architecture principles",
+    ],
+    images: [
+      { url: "./src/assets/images/projects/iwrite.png", alt: "iWrite" }, 
+    ],
+    tags: ["Flutter", "Clean Architecture", "Supabase"],
+  },
+
+  {
+    title: "Tic-Tac-Toe",
+    category: "iOS",
+    image: "./src/assets/images/projects/tictactoe.png",
+    link: "https://github.com/ShishirRijal/TicTacToe-SwiftUI",
+    description: "A modern SwiftUI-based Tic-Tac-Toe game featuring MVVM architecture, stunning UI, confetti celebration, and responsive design for iOS devices.",
+    technologies: ["Swift", "SwiftUI", "MVVM"],
+    features: [
+      "Two-player mode (X vs. O)",
+      "Confetti celebration for the winner",
+      "Sleek and responsive UI",
+      "MVVM architecture for clean code structure",
+      "Compatible with iPhones and iPads",
+    ],
+    images: [
+      { url: "./src/assets/images/projects/tictactoe.png", alt: "Tic-Tac-Toe" }, 
+    ],
+    tags: ["SwiftUI", "Game Development", "MVVM", "iOS"],
+  },
+
+  {
+    title: "BloodBond Backend",
+    category: "python",
+    image: "./src/assets/images/projects/bloodbond-backend.png",
+    link: "https://github.com/ShishirRijal/BloodBond-Backend",
+    description: "A FastAPI-powered backend for BloodBond, a revolutionary blood donation platform that connects donors with those in need through real-time alerts, location-based matching, and gamified engagement.",
+    technologies: ["FastAPI", "Python", "PostgreSQL", "OAuth2", "Alembic"],
+    images: [
+      { url: "./src/assets/images/projects/bloodbond-backend.png", alt: "BloodBond Backend" }, 
+    ],
+    features: [
+      "Donor registration and search",
+      "Location-based donor matching",
+      "Real-time push notifications for urgent needs",
+      "Gamified donation system with redeemable points",
+      "Real-time alerts on viral diseases",
+      "OAuth2 authentication and security",
+      "RESTful API with Swagger documentation",
+    ],
+    tags: ["FastAPI", "Backend", "Blood Donation", "OAuth2", "PostgreSQL"],
+  },
+
+  {
+    "title": "YatraSathi",
+    "category": "iOS",
+    "image": "./src/assets/images/projects/yatrasathi.png",
+    "link": "https://github.com/ShishirRijal/YatraSathi",
+    "description": "YatraSathi is a SwiftUI-based application that allows users to explore various destinations across a map interface. The app provides a rich experience by integrating a list of popular locations, offering detailed information and an interactive map for location exploration.",
+    "technologies": ["Swift", "SwiftUI", "Xcode", "iOS"],
+    "images": [
+      { "url": "./src/assets/images/projects/yatrasathi.png", "alt": "YatraSathi Logo" }
+    ],
+    "features": [
+      "Map Integration with interactive location markers",
+      "Location Preview with descriptions and images",
+      "Detailed location view with extended information",
+      "Seamless and responsive UI with SwiftUI",
+      "Clean and organized MVVM architecture"
+    ],
+    "tags": ["SwiftUI", "iOS", "Map", "Location", "MVVM"]
+  },
+  
+  
 
 
 ];
