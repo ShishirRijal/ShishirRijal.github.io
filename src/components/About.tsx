@@ -14,6 +14,8 @@ import {VscAzure} from "react-icons/vsc";
 // import { FaSwift, FaPython } from "react-icons/fa";
 // import { MdFilter } from "react-icons/md";
 import { FaFlutter } from "react-icons/fa6";
+import { ExternalLink } from 'lucide-react';
+import { useEffect, useRef } from 'react';
 
 // Skill groups for marquee
 const skillsTop = [
@@ -56,6 +58,223 @@ const SkillCard = ({ icon: Icon, name, color }: { icon: React.ElementType; name:
   </div>
 );
 
+// Update the Certificate interface
+interface Certificate {
+  name: string;
+  issuer: string;
+  issuerLogo: string;
+  issuedDate: string;
+  credentialUrl?: string;
+  color: string;
+  bgColor: string;
+}
+
+// Update the certificates array
+const certificates: Certificate[] = [
+  
+  {
+    name: "Become a Django Developer",
+    issuer: "LinkedIn",
+    issuerLogo: "./src/assets/images/icons/linkedin.png",
+    issuedDate: "Oct 2024",
+    credentialUrl: "null", // Using Show credential button in image
+    color: "#0A66C2", // LinkedIn blue
+    bgColor: "rgba(10, 102, 194, 0.05)", // Light LinkedIn blue background
+   },
+  {
+    name: "Associate Data Analyst",
+    issuer: "DataCamp",
+    issuerLogo: "./src/assets/images/icons/datacamp.png",
+    issuedDate: "Jul 2024",
+    credentialUrl: "./Data Analyst With SQL.pdf", // From the image attachment
+    color: "#03EF62", // DataCamp green
+    bgColor: "rgba(3, 239, 98, 0.05)", // Light DataCamp green background
+   },
+  {
+    name: "Data Manipulation with Pandas",
+    issuer: "DataCamp",
+    issuerLogo: "./src/assets/images/icons/datacamp.png",
+    issuedDate: "Jan 2024",
+    credentialUrl: "./pandas.pdf", // From the image attachment
+    color: "#03EF62", // DataCamp green
+    bgColor: "rgba(3, 239, 98, 0.05)", // Light DataCamp green background
+   },
+  {
+    name: "Flutter Advanced Course",
+    issuer: "Udemy",
+    issuerLogo: "./src/assets/images/icons/udemy.png",
+    issuedDate: "Jun 2023",
+    credentialUrl: "null", // Using Show credential button in image
+    color: "#A435F0", // Udemy purple
+    bgColor: "rgba(164, 53, 240, 0.05)", // Light Udemy purple background
+   },
+  {
+    name: "Flutter with Firebase",
+    issuer: "Udemy",
+    issuerLogo: "./src/assets/images/icons/udemy.png",
+    issuedDate: "Nov 2022",
+    credentialUrl: "null", // Using Show credential button in image
+    color: "#A435F0", // Udemy purple
+    bgColor: "rgba(164, 53, 240, 0.05)", // Light Udemy purple background
+   },
+  {
+    name: "Introduction to Git and Github",
+    issuer: "Coursera",
+    issuerLogo: "./src/assets/images/icons/coursera.png",
+    issuedDate: "Nov 2022",
+    credentialUrl: "null", // Using Show credential button in image
+    color: "#0056D2", // Coursera blue
+    bgColor: "rgba(0, 86, 210, 0.05)", // Light Coursera blue background
+   }
+ 
+
+];
+
+// Update the CertificateCard component
+const CertificateCard = ({ certificate, index }: { certificate: Certificate; index: number }) => {
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px'
+      }
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div 
+      ref={cardRef}
+      className="certificate-card slide-in"
+      style={{ 
+        backgroundColor: certificate.bgColor,
+        animationDelay: `${index * 0.1}s`
+      }}
+    >
+      {/* Card Content Wrapper */}
+      <div className="cert-content-wrapper">
+        {/* Header Section */}
+        <div className="cert-header">
+          <div 
+            className="cert-logo-container"
+            style={{ 
+              backgroundColor: `white`,
+              borderColor: `${certificate.color}`,
+              borderRadius: '8px',
+              padding: '5px',
+              borderWidth: '8px'
+            }}
+          >
+            <img 
+              src={certificate.issuerLogo} 
+              alt={`${certificate.issuer} logo`} 
+              className="cert-issuer-logo"
+            />
+          </div>
+          <div className="cert-title-container">
+            <h4 className="cert-name">{certificate.name}</h4>
+            <p className="cert-issuer">{certificate.issuer}</p>
+          </div>
+        </div>
+
+        {/* Date Section */}
+        <div className="cert-dates">
+          <div className="cert-date-item">
+            <div className="flex items-center gap-2">
+              <span className="cert-date-label">Issued On:</span>
+              <span className="cert-date-value">{certificate.issuedDate}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Button Section */}
+      {certificate.credentialUrl && (
+        <div className="cert-button-wrapper">
+          <a 
+            href={certificate.credentialUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cert-view-btn"
+            style={{ 
+              borderColor: `${certificate.color}`,
+              backgroundColor: `${certificate.color}70`,
+              color: 'white'
+            }}
+          >
+            View Certificate <ExternalLink className="w-4 h-4 ml-1" />
+          </a>
+        </div>
+      )}
+    </div>
+  );
+};
+
+// Add this new component for service items
+const ServiceCard = ({ icon: Icon, title, description, color, index }: { 
+  icon: React.ElementType; 
+  title: string; 
+  description: string; 
+  color: string;
+  index: number;
+}) => {
+  const cardRef = useRef<HTMLLIElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px'
+      }
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <li 
+      ref={cardRef}
+      className="service-item slide-in p-6 bg-gray-800 rounded-xl shadow-lg border border-gray-700 hover:scale-105 transition"
+      style={{ animationDelay: `${index * 0.1}s` }}
+    >
+      <div className="flex items-center gap-4 mb-4">
+        <div className={`p-3 rounded-xl ${color}`}>
+          <Icon className="w-6 h-6 text-white" />
+        </div>
+        <h4 className="text-lg font-semibold">{title}</h4>
+      </div>
+      <p className="text-gray-400" dangerouslySetInnerHTML={{ __html: description }} />
+    </li>
+  );
+};
+
 export default function About() {
   return (
     <article className="about">
@@ -82,56 +301,35 @@ export default function About() {
       </section>
       {/* Services Section */}
       <section className="service">
-      <section className="text-white">
-      <h3 className="text-2xl font-bold mb-8">What I'm Doing</h3>
- 
-      
-      <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 px-6">
-        
-
-  {/* Cross-Platform Development */}
-  <li className="service-item p-6 bg-gray-800 rounded-xl shadow-lg border border-gray-700 hover:scale-105 transition">
-          <div className="flex items-center gap-4 mb-4">
-            <div className="p-3 rounded-xl bg-blue-500/80">
-              <FaFlutter className="w-6 h-6 text-white" />
-            </div>
-            <h4 className="text-lg font-semibold">Cross-Platform Development</h4>
-          </div>
-          <p className="text-gray-400">
-            Build beautiful apps for iOS & Android with <strong className="text-blue-400">Dart & Flutter</strong>.
-          </p>
-        </li>
-
-        {/* Native iOS Development */}
-        <li className="service-item p-6 bg-gray-800 rounded-xl shadow-lg border border-gray-700 hover:scale-105 transition">
-          <div className="flex items-center gap-4 mb-4">
-            <div className="p-3 rounded-xl bg-orange-500/80">
-              <FaSwift className="w-6 h-6 text-white" />
-            </div>
-            <h4 className="text-lg font-semibold">Native iOS Development</h4>
-          </div>
-          <p className="text-gray-400">
-            Crafting high-performance, elegant iOS apps using <strong className="text-orange-400">Swift & SwiftUI</strong>.
-          </p>
-        </li>
-
-      
-
-        {/* Backend Development */}
-        <li className="service-item p-6 bg-gray-800 rounded-xl shadow-lg border border-gray-700 hover:scale-105 transition">
-          <div className="flex items-center gap-4 mb-4">
-            <div className="p-3 rounded-xl bg-green-600/80">
-              <FaPython className="w-6 h-6 text-white" />
-            </div>
-            <h4 className="text-lg font-semibold">Backend Development</h4>
-          </div>
-          <p className="text-gray-400">
-            Building secure & scalable backends using <strong className="text-green-400">Django & FastAPI</strong>.
-          </p>
-        </li>
-      </ul>
-
-    </section>
+        <section className="text-white">
+          <h3 className="text-2xl font-bold mb-8">What I'm Doing</h3>
+          
+          <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 px-6">
+            <ServiceCard 
+              icon={FaFlutter}
+              title="Cross-Platform Development"
+              description='Build beautiful apps for iOS & Android with <strong className="text-blue-400">Dart & Flutter</strong>.'
+              color="bg-blue-500/80"
+              index={0}
+            />
+            
+            <ServiceCard 
+              icon={FaSwift}
+              title="Native iOS Development"
+              description='Crafting high-performance, elegant iOS apps using <strong className="text-orange-400">Swift & SwiftUI</strong>.'
+              color="bg-orange-500/80"
+              index={1}
+            />
+            
+            <ServiceCard 
+              icon={FaPython}
+              title="Backend Development"
+              description='Building secure & scalable backends using <strong className="text-green-400">Django & FastAPI</strong>.'
+              color="bg-green-600/80"
+              index={2}
+            />
+          </ul>
+        </section>
       </section>
 
       {/* Skills Section */}
@@ -164,6 +362,21 @@ export default function About() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Certifications Section */}
+      <section className="certifications-section">
+        <h3 className="text-2xl font-bold my-8">Certifications</h3>
+        
+        <div className="certificates-grid">
+          {certificates.map((cert, index) => (
+            <CertificateCard 
+              key={index} 
+              certificate={cert} 
+              index={index}
+            />
+          ))}
         </div>
       </section>
     </article>
