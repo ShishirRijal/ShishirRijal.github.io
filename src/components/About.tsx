@@ -71,7 +71,25 @@ interface Certificate {
 
 // Update the certificates array
 const certificates: Certificate[] = [
-  
+  {
+    name: "Flutter with Firebase",
+    issuer: "Udemy",
+    issuerLogo: "/assets/images/icons/udemy.png",
+    issuedDate: "Nov 2022",
+    credentialUrl: "null", // Using Show credential button in image
+    color: "#A435F0", // Udemy purple
+    bgColor: "rgba(164, 53, 240, 0.05)", // Light Udemy purple background
+   },
+  {
+    name: "Flutter Advanced Course",
+    issuer: "Udemy",
+    issuerLogo: "/assets/images/icons/udemy.png",
+    issuedDate: "Jun 2023",
+    credentialUrl: "null", // Using Show credential button in image
+    color: "#A435F0", // Udemy purple
+    bgColor: "rgba(164, 53, 240, 0.05)", // Light Udemy purple background
+   },
+ 
   {
     name: "Become a Django Developer",
     issuer: "LinkedIn",
@@ -99,24 +117,7 @@ const certificates: Certificate[] = [
     color: "#03EF62", // DataCamp green
     bgColor: "rgba(3, 239, 98, 0.05)", // Light DataCamp green background
    },
-  {
-    name: "Flutter Advanced Course",
-    issuer: "Udemy",
-    issuerLogo: "/assets/images/icons/udemy.png",
-    issuedDate: "Jun 2023",
-    credentialUrl: "null", // Using Show credential button in image
-    color: "#A435F0", // Udemy purple
-    bgColor: "rgba(164, 53, 240, 0.05)", // Light Udemy purple background
-   },
-  {
-    name: "Flutter with Firebase",
-    issuer: "Udemy",
-    issuerLogo: "/assets/images/icons/udemy.png",
-    issuedDate: "Nov 2022",
-    credentialUrl: "null", // Using Show credential button in image
-    color: "#A435F0", // Udemy purple
-    bgColor: "rgba(164, 53, 240, 0.05)", // Light Udemy purple background
-   },
+ 
   {
     name: "Introduction to Git and Github",
     issuer: "Coursera",
