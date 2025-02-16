@@ -75,7 +75,7 @@ const certificates: Certificate[] = [
   {
     name: "Become a Django Developer",
     issuer: "LinkedIn",
-    issuerLogo: "./src/assets/images/icons/linkedin.png",
+    issuerLogo: "/assets/images/icons/linkedin.png",
     issuedDate: "Oct 2024",
     credentialUrl: "null", // Using Show credential button in image
     color: "#0A66C2", // LinkedIn blue
@@ -84,7 +84,7 @@ const certificates: Certificate[] = [
   {
     name: "Associate Data Analyst",
     issuer: "DataCamp",
-    issuerLogo: "./src/assets/images/icons/datacamp.png",
+    issuerLogo: "/assets/images/icons/datacamp.png",
     issuedDate: "Jul 2024",
     credentialUrl: "./Data Analyst With SQL.pdf", // From the image attachment
     color: "#03EF62", // DataCamp green
@@ -93,7 +93,7 @@ const certificates: Certificate[] = [
   {
     name: "Data Manipulation with Pandas",
     issuer: "DataCamp",
-    issuerLogo: "./src/assets/images/icons/datacamp.png",
+    issuerLogo: "/assets/images/icons/datacamp.png",
     issuedDate: "Jan 2024",
     credentialUrl: "./pandas.pdf", // From the image attachment
     color: "#03EF62", // DataCamp green
@@ -102,7 +102,7 @@ const certificates: Certificate[] = [
   {
     name: "Flutter Advanced Course",
     issuer: "Udemy",
-    issuerLogo: "./src/assets/images/icons/udemy.png",
+    issuerLogo: "/assets/images/icons/udemy.png",
     issuedDate: "Jun 2023",
     credentialUrl: "null", // Using Show credential button in image
     color: "#A435F0", // Udemy purple
@@ -111,7 +111,7 @@ const certificates: Certificate[] = [
   {
     name: "Flutter with Firebase",
     issuer: "Udemy",
-    issuerLogo: "./src/assets/images/icons/udemy.png",
+    issuerLogo: "/assets/images/icons/udemy.png",
     issuedDate: "Nov 2022",
     credentialUrl: "null", // Using Show credential button in image
     color: "#A435F0", // Udemy purple
@@ -120,7 +120,7 @@ const certificates: Certificate[] = [
   {
     name: "Introduction to Git and Github",
     issuer: "Coursera",
-    issuerLogo: "./src/assets/images/icons/coursera.png",
+    issuerLogo: "/assets/images/icons/coursera.png",
     issuedDate: "Nov 2022",
     credentialUrl: "null", // Using Show credential button in image
     color: "#0056D2", // Coursera blue

@@ -26,12 +26,12 @@ const projects: Project[] = [
   {
     title: "Hack and Hunt",
     category: "flutter",
-    image: "./src/assets/images/projects/hackandhunt_app.png",  // replace with actual URL for the image
+    image: "/assets/images/projects/hackandhunt_app.png",  // replace with actual URL for the image
     link: "https://github.com/ShishirRijal/treasurehunt-app",  // replace with actual URL
     description: "Hack and Hunt is a Flutter-based platform for organizing and participating in treasure hunts combined with coding competitions. It offers a unique blend of adventure and coding challenges, making learning and competition fun and engaging.",
     technologies: ["Flutter", "Dart", "Firebase"],  // add any technologies used
     images: [
-      { url: "./src/assets/images/projects/hackandhunt_app.png", alt: "UI Preview 1" },  // replace with actual image URLs
+      { url: "/assets/images/projects/hackandhunt_app.png", alt: "UI Preview 1" },  // replace with actual image URLs
      ],
     features: [
       "Gamified coding challenges",
@@ -48,7 +48,7 @@ const projects: Project[] = [
   {
     title: "ShopSphere",
     category: "flutter",
-    image: "./src/assets/images/projects/shopsphere.png",
+    image: "/assets/images/projects/shopsphere.png",
     link: "https://github.com/ShishirRijal/ShopSphere",
     description: "A feature-rich e-commerce application built with Flutter and Firebase, implementing Clean Architecture principles.",
     technologies: ["Flutter", "Firebase", "Provider", "Clean Architecture"],
@@ -58,7 +58,7 @@ const projects: Project[] = [
     summary: "A feature-rich e-commerce application built with Flutter and Firebase, implementing Clean Architecture principles. This project demonstrates modern app development patterns, SOLID principles, and best practices in mobile development.",
     tags: ["Flutter", "Firebase", "Clean Architecture", "Provider", "Mobile Development"],
     images: [
-      { url: "./src/assets/images/projects/shopsphere.png", alt: "ShopSphere" }, 
+      { url: "/assets/images/projects/shopsphere.png", alt: "ShopSphere" }, 
     ],
     features: [
       "Dual role support (Admin/Customer)",
@@ -71,7 +71,7 @@ const projects: Project[] = [
   {
     title: "Budget Tracker",
     category: "flutter",
-    image: "./src/assets/images/projects/budget-tracker.png",
+    image: "/assets/images/projects/budget-tracker.png",
     link: "https://github.com/ShishirRijal/expense_tracker",
     description: "Budget Tracker is a mobile application built using Flutter that enables users to record their daily financial transactions, whether income or expense. The app allows for categorization of transactions, including custom categories, and stores data locally on the device using Hive.",
     technologies: ["Flutter", "Dart", "Hive", "Provider"],
@@ -81,7 +81,7 @@ const projects: Project[] = [
     summary: "Budget Tracker is a Flutter-based app that allows users to record, track, and categorize daily transactions, helping them manage their finances effectively. With features like customizable categories, local data storage, and visual charts, the app provides a complete solution for personal budgeting.",
     tags: ["Flutter", "Finance", "Expense Tracker", "Hive", "Provider"],
     images: [
-      { url: "./src/assets/images/projects/budget-tracker.png", alt: "Budget Tracker" }, 
+      { url: "/assets/images/projects/budget-tracker.png", alt: "Budget Tracker" }, 
     ],
     features: [
       "Money Card with user's financial overview",
@@ -99,7 +99,7 @@ const projects: Project[] = [
   {
     title: "Katha | A Medium clone with SwiftUI",
     category: "ios",
-    image: "./src/assets/images/projects/katha.png",
+    image: "/assets/images/projects/katha.png",
     link: "https://github.com/ShishirRijal/katha",
     description: "A beautifully designed blog platform inspired by Medium, built entirely in SwiftUI for iOS.",
     technologies: ["SwiftUI", "Firebase", "CoreData", "iOS"],
@@ -109,7 +109,7 @@ const projects: Project[] = [
     summary: "A beautifully designed blog platform inspired by Medium, built entirely in SwiftUI for iOS. Features offline support, seamless article management, and a modern user interface powered by Firebase and CoreData.",
     tags: ["SwiftUI", "Firebase", "CoreData", "iOS", "Blog Platform"],
     images: [
-      { url: "./src/assets/images/projects/katha.png", alt: "Katha" }, 
+      { url: "/assets/images/projects/katha.png", alt: "Katha" }, 
     ],
 
     features: [
@@ -125,7 +125,7 @@ const projects: Project[] = [
   {
     title: "Netflix Clone",
     category: "ios",
-    image: "./src/assets/images/projects/netflix-clone-swiftui.png",
+    image: "/assets/images/projects/netflix-clone-swiftui.png",
     link: "https://github.com/ShishirRijal/Netflix-Clone-SwiftUI",
     description: "A sleek and modern Netflix clone built with SwiftUI, implementing core features of the Netflix mobile app while following best practices in iOS development.",
     technologies: ["SwiftUI", "TMDB API", "MVVM"],
@@ -135,7 +135,7 @@ const projects: Project[] = [
     summary: "A sleek and modern Netflix clone built with SwiftUI, implementing core features of the Netflix mobile app while following best practices in iOS development.",
     tags: ["SwiftUI", "TMDB API", "iOS Development", "MVVM"],
     images: [
-      { url: "./src/assets/images/projects/netflix-clone-swiftui.png", alt: "Netflix Clone" }, 
+      { url: "/assets/images/projects/netflix-clone-swiftui.png", alt: "Netflix Clone" }, 
     ],
     features: [
       "Home Screen with trending content",
@@ -149,7 +149,7 @@ const projects: Project[] = [
   {
     title: "Resume Parser",
     category: "machine learning",
-    image: "./src/assets/images/projects/resume-parser.png",
+    image: "/assets/images/projects/resume-parser.png",
     link: "https://github.com/ShishirRijal/Resume-Parser",
     description: "Resume Parser is an NLP tool designed to extract key information from resumes in PDF and DOCX formats.",
     technologies: ["Python", "NLP", "Streamlit", "pdfminer", "python-docx"],
@@ -159,7 +159,7 @@ const projects: Project[] = [
     summary: "Resume Parser is an NLP tool designed to extract key information from resumes in PDF and DOCX formats. It offers both a command-line interface for batch processing and a user-friendly web interface built with Streamlit for interactive use.",
     tags: ["NLP", "Python", "Streamlit", "pdfminer", "python-docx", "pandas"],
     images: [
-      { url: "./src/assets/images/projects/resume-parser.png", alt: "Resume Parser" }, 
+      { url: "/assets/images/projects/resume-parser.png", alt: "Resume Parser" }, 
     ],
     features: [
       "Parse PDF and DOCX formats",
@@ -172,12 +172,12 @@ const projects: Project[] = [
   {
     title: "Zero Waste Kitchen",
     category: "flutter",
-    image: "./src/assets/images/projects/zero-waste-kitchen.png",  // replace with actual URL for the image
+    image: "/assets/images/projects/zero-waste-kitchen.png",  // replace with actual URL for the image
     link: "https://github.com/ShishirRijal/Zero-Waste-Kitchen-Flutter",  // replace with actual URL
     description: "Zero Waste Kitchen is a Flutter-based mobile application that helps reduce kitchen food waste by allowing users to share excess food items with NGOs, INGOs, orphanages, and old age homes. The app aims to promote sustainability and social responsibility.",
     technologies: ["Flutter", "Dart", "Firebase"],
     images: [
-      { url: "./src/assets/images/projects/zero-waste-kitchen.png", alt: "App UI Preview 1" },  // replace with actual image URLs
+      { url: "/assets/images/projects/zero-waste-kitchen.png", alt: "App UI Preview 1" },  // replace with actual image URLs
      ],
     features: [
       "User authentication and registration",
@@ -198,7 +198,7 @@ const projects: Project[] = [
   {
     title: "Quiz App",
     category: "flutter",
-    image: "./src/assets/images/projects/quiz_app.png",
+    image: "/assets/images/projects/quiz_app.png",
     link: "https://github.com/ShishirRijal/Quiz-App",
     description: "A stunning cross-platform quiz application built with Flutter and Firebase, designed to test your knowledge and track your progress.",
     technologies: ["Flutter", "Firebase", "Provider"],
@@ -208,7 +208,7 @@ const projects: Project[] = [
     summary: "A stunning cross-platform quiz application built with Flutter and Firebase, designed to test your knowledge and track your progress.",
     tags: ["Flutter", "Firebase", "Google", "Mobile Development"],
     images: [
-      { url: "./src/assets/images/projects/quiz_app.png", alt: "Quiz App" }, 
+      { url: "/assets/images/projects/quiz_app.png", alt: "Quiz App" }, 
     ],
     features: [
       "Cross-platform support",
@@ -222,7 +222,7 @@ const projects: Project[] = [
   {
     title: "Hack and Hunt Backend",
     category: "python",
-    image: "./src/assets/images/projects/hackandhunt_backend.png",  
+    image: "/assets/images/projects/hackandhunt_backend.png",  
     link: "https://github.com/ShishirRijal/hackandhunt-api",
     description: "Hack and Hunt API is a Django-based web application that provides APIs for managing user accounts and game-related functionalities like leaderboards, levels, and riddles. It powers the Hack and Hunt platform, enabling seamless gameplay.",
     technologies: ["Django", "Django REST Framework", "PostgreSQL"],
@@ -234,7 +234,7 @@ const projects: Project[] = [
       "Token-based authentication"
     ],
     images: [
-      { url: "./src/assets/images/projects/hackandhunt_backend.png", alt: "Hack and Hunt Backend" }, 
+      { url: "/assets/images/projects/hackandhunt_backend.png", alt: "Hack and Hunt Backend" }, 
     ],
     startDate: "2024-03-10",
     endDate: "2024-03-30",
@@ -245,7 +245,7 @@ const projects: Project[] = [
   {
     title: "Emotion Detection",
     category: "machine learning",
-    image: "./src/assets/images/projects/emotion_detection.png",
+    image: "/assets/images/projects/emotion_detection.png",
     link: "https://github.com/ShishirRijal/Emotion_Detection",
     description: "Facial emotion detection using deep learning architectures, trained on the FER-2013 dataset. The project explores CNN-based models and transfer learning for classifying emotions.",
     technologies: ["Python", "TensorFlow", "Keras", "OpenCV", "Deep Learning"],
@@ -256,7 +256,7 @@ const projects: Project[] = [
       "Facial emotion classification into seven categories"
     ],
     images: [
-      { url: "./src/assets/images/projects/emotion_detection.png", alt: "Emotion Detection" }, 
+      { url: "/assets/images/projects/emotion_detection.png", alt: "Emotion Detection" }, 
     ],
     startDate: "2024-09-10",
     endDate: "2024-09-30",
@@ -268,7 +268,7 @@ const projects: Project[] = [
   {
     title: "In-Browser Proctoring System",
     category: "machine learning",
-    image: "./src/assets/images/projects/inbrowser_proctoring.png",
+    image: "/assets/images/projects/inbrowser_proctoring.png",
     link: "https://github.com/ShishirRijal/In-Browser-Proctoring-System",
     description: "An advanced web-based proctoring system for secure online examinations, integrating face recognition, object detection, head pose estimation, and background audio monitoring.",
     technologies: ["Python", "Django", "PyTorch", "OpenCV", "dlib", "NumPy", "Matplotlib", "Seaborn"],
@@ -282,7 +282,7 @@ const projects: Project[] = [
       "Institution-specific exam creation"
     ],
     images: [
-      { url: "./src/assets/images/projects/inbrowser_proctoring.png", alt: "In-Browser Proctoring" }, 
+      { url: "/assets/images/projects/inbrowser_proctoring.png", alt: "In-Browser Proctoring" }, 
     ],  
 
     startDate: "2024-10-05",
@@ -295,7 +295,7 @@ const projects: Project[] = [
   {
     title: "iWrite",
     category: "flutter",
-    image: "./src/assets/images/projects/iwrite.png",
+    image: "/assets/images/projects/iwrite.png",
     link: "https://github.com/ShishirRijal/iWrite",
     description: "A Flutter-based blog application implementing Clean Architecture, featuring user authentication, blog creation, offline support, and local data caching.",
     technologies: ["Flutter", "Supabase", "Hive", "GetIt"],
@@ -307,7 +307,7 @@ const projects: Project[] = [
       "Exception handling with Clean Architecture principles",
     ],
     images: [
-      { url: "./src/assets/images/projects/iwrite.png", alt: "iWrite" }, 
+      { url: "/assets/images/projects/iwrite.png", alt: "iWrite" }, 
     ],
     tags: ["Flutter", "Clean Architecture", "Supabase"],
   },
@@ -315,7 +315,7 @@ const projects: Project[] = [
   {
     title: "Tic-Tac-Toe",
     category: "iOS",
-    image: "./src/assets/images/projects/tictactoe.png",
+    image: "/assets/images/projects/tictactoe.png",
     link: "https://github.com/ShishirRijal/TicTacToe-SwiftUI",
     description: "A modern SwiftUI-based Tic-Tac-Toe game featuring MVVM architecture, stunning UI, confetti celebration, and responsive design for iOS devices.",
     technologies: ["Swift", "SwiftUI", "MVVM"],
@@ -327,7 +327,7 @@ const projects: Project[] = [
       "Compatible with iPhones and iPads",
     ],
     images: [
-      { url: "./src/assets/images/projects/tictactoe.png", alt: "Tic-Tac-Toe" }, 
+      { url: "/assets/images/projects/tictactoe.png", alt: "Tic-Tac-Toe" }, 
     ],
     tags: ["SwiftUI", "Game Development", "MVVM", "iOS"],
   },
@@ -335,12 +335,12 @@ const projects: Project[] = [
   {
     title: "BloodBond Backend",
     category: "python",
-    image: "./src/assets/images/projects/bloodbond-backend.png",
+    image: "/assets/images/projects/bloodbond-backend.png",
     link: "https://github.com/ShishirRijal/BloodBond-Backend",
     description: "A FastAPI-powered backend for BloodBond, a revolutionary blood donation platform that connects donors with those in need through real-time alerts, location-based matching, and gamified engagement.",
     technologies: ["FastAPI", "Python", "PostgreSQL", "OAuth2", "Alembic"],
     images: [
-      { url: "./src/assets/images/projects/bloodbond-backend.png", alt: "BloodBond Backend" }, 
+      { url: "/assets/images/projects/bloodbond-backend.png", alt: "BloodBond Backend" }, 
     ],
     features: [
       "Donor registration and search",
@@ -357,12 +357,12 @@ const projects: Project[] = [
   {
     "title": "YatraSathi",
     "category": "iOS",
-    "image": "./src/assets/images/projects/yatrasathi.png",
+    "image": "/assets/images/projects/yatrasathi.png",
     "link": "https://github.com/ShishirRijal/YatraSathi",
     "description": "YatraSathi is a SwiftUI-based application that allows users to explore various destinations across a map interface. The app provides a rich experience by integrating a list of popular locations, offering detailed information and an interactive map for location exploration.",
     "technologies": ["Swift", "SwiftUI", "Xcode", "iOS"],
     "images": [
-      { "url": "./src/assets/images/projects/yatrasathi.png", "alt": "YatraSathi Logo" }
+      { "url": "/assets/images/projects/yatrasathi.png", "alt": "YatraSathi Logo" }
     ],
     "features": [
       "Map Integration with interactive location markers",

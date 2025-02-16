@@ -9,7 +9,7 @@ export default function Sidebar() {
       <div className="sidebar-info">
         <figure className="avatar-box">
           <img 
-            src="./src/assets/images/shishir/shishir.png" 
+            src="/assets/images/shishir/shishir.png" 
             alt="Shishir Rijal" 
           />
         </figure>
