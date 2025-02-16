@@ -88,6 +88,20 @@ export default function About() {
       
       <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 px-6">
         
+
+  {/* Cross-Platform Development */}
+  <li className="service-item p-6 bg-gray-800 rounded-xl shadow-lg border border-gray-700 hover:scale-105 transition">
+          <div className="flex items-center gap-4 mb-4">
+            <div className="p-3 rounded-xl bg-blue-500/80">
+              <FaFlutter className="w-6 h-6 text-white" />
+            </div>
+            <h4 className="text-lg font-semibold">Cross-Platform Development</h4>
+          </div>
+          <p className="text-gray-400">
+            Build beautiful apps for iOS & Android with <strong className="text-blue-400">Dart & Flutter</strong>.
+          </p>
+        </li>
+
         {/* Native iOS Development */}
         <li className="service-item p-6 bg-gray-800 rounded-xl shadow-lg border border-gray-700 hover:scale-105 transition">
           <div className="flex items-center gap-4 mb-4">
@@ -101,18 +115,7 @@ export default function About() {
           </p>
         </li>
 
-        {/* Cross-Platform Development */}
-        <li className="service-item p-6 bg-gray-800 rounded-xl shadow-lg border border-gray-700 hover:scale-105 transition">
-          <div className="flex items-center gap-4 mb-4">
-            <div className="p-3 rounded-xl bg-blue-500/80">
-              <FaFlutter className="w-6 h-6 text-white" />
-            </div>
-            <h4 className="text-lg font-semibold">Cross-Platform Development</h4>
-          </div>
-          <p className="text-gray-400">
-            Build beautiful apps for iOS & Android with <strong className="text-blue-400">Dart & Flutter</strong>.
-          </p>
-        </li>
+      
 
         {/* Backend Development */}
         <li className="service-item p-6 bg-gray-800 rounded-xl shadow-lg border border-gray-700 hover:scale-105 transition">
@@ -123,7 +126,7 @@ export default function About() {
             <h4 className="text-lg font-semibold">Backend Development</h4>
           </div>
           <p className="text-gray-400">
-            Building **secure & scalable** backends using <strong className="text-green-400">Django & FastAPI</strong>.
+            Building secure & scalable backends using <strong className="text-green-400">Django & FastAPI</strong>.
           </p>
         </li>
       </ul>

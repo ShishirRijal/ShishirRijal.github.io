@@ -75,6 +75,22 @@ main {
   }
 }
 
+.article-title {
+  font-size: 2rem; /* Adjust as needed */
+  font-weight: bold;
+  color: white; /* Dark color for the text */
+  margin-bottom: 1rem; /* Space below the title */
+  padding-bottom: 0.5rem; /* Padding between text and border */
+  border-bottom: 3px solid green; /* Green bottom border */
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.article-title:hover {
+color: var(--accent);
+  border-bottom: 3px solid #004d00; /* Darker green border on hover */
+}
+
+
 /* Sidebar */
 .sidebar {
   @apply bg-surface rounded-2xl p-6 backdrop-blur-lg;
@@ -271,7 +287,7 @@ main {
 }
 
 .project-title {
-  @apply px-4 pt-4 text-sm font-semibold; 
+  @apply px-4 pt-4 text-lg font-semibold; 
   background: var(--text-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -279,6 +295,13 @@ main {
 
 .project-category {
   @apply px-4 pb-4 text-sm text-gray-400 capitalize;
+}
+
+.project-tag-item {
+  color: grey;
+}
+.dot-separator {
+  margin: 0 5px;
 }
 
 /* Filter styles */
@@ -297,6 +320,8 @@ main {
   background: var(--primary);
   color: var(--text-primary);
 }
+
+ 
 
 /* Update toggle button styles */
 .toggle-btn {
@@ -651,4 +676,210 @@ main {
 .service ul {
   @apply grid gap-4 md:gap-6 px-0 md:px-6;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Project Modal Styles */
+.project-modal-backdrop {
+  @apply fixed inset-0 z-50 bg-black/70 flex items-center justify-center p-4 md:p-8;
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.2s ease-out;
+}
+
+.project-modal {
+  @apply relative bg-surface rounded-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: slideUp 0.3s ease-out;
+}
+
+.modal-close-btn {
+  @apply absolute top-4 right-4 p-2 rounded-full bg-surface-light/50 text-gray-400 
+    hover:bg-surface-light hover:text-white transition-all z-10;
+  backdrop-filter: blur(4px);
+}
+
+/* Project Carousel */
+.project-carousel {
+  @apply relative aspect-video w-full rounded-t-2xl overflow-hidden bg-black/50;
+}
+
+.carousel-image {
+  @apply w-full h-full object-contain;
+}
+
+.carousel-btn {
+  @apply absolute top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/50 text-white
+    opacity-0 transition-opacity duration-200 hover:bg-black/70;
+  backdrop-filter: blur(4px);
+}
+
+.project-carousel:hover .carousel-btn {
+  @apply opacity-100;
+}
+
+.carousel-btn.prev {
+  @apply left-4;
+}
+
+.carousel-btn.next {
+  @apply right-4;
+}
+
+.carousel-indicators {
+  @apply absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2;
+}
+
+.indicator {
+  @apply w-2 h-2 rounded-full bg-white/50 transition-all;
+}
+
+.indicator.active {
+  @apply bg-white w-4;
+}
+
+/* Project Details */
+.project-details {
+  @apply p-6 md:p-8 space-y-6;
+}
+
+.project-modal-title {
+  @apply text-2xl font-bold text-white mb-4;
+}
+
+.project-description {
+  @apply text-gray-300 leading-relaxed;
+}
+
+.project-features {
+  @apply space-y-3;
+}
+
+.project-features h4 {
+  @apply text-lg font-semibold text-white;
+}
+
+.project-features ul {
+  @apply space-y-2 list-disc list-inside text-gray-300;
+}
+
+.project-tech {
+  @apply space-y-3;
+}
+
+.project-tech h4 {
+  @apply text-lg font-semibold text-white;
+}
+
+.tech-tags {
+  @apply flex flex-wrap gap-2;
+}
+
+.tech-tag {
+  @apply px-3 py-1 rounded-full text-sm font-medium bg-surface-light text-primary;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.source-code-btn {
+  @apply mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-xl font-medium
+      text-white  ;
+      background-color: var(--primary);
+
+      
+
+  }
+
+  .source-code-btn:hover {
+    background-color: var(--primary-dark);
+    color: var(--text-primary);
+    /* transform: scale(1.05); */
+    transition: all 0.3s ease;
+  }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .project-modal {
+    @apply max-h-[95vh];
+  }
+
+  .project-details {
+    @apply p-4 md:p-6;
+  }
+
+  .project-modal-title {
+    @apply text-xl;
+  }
+
+  .carousel-btn {
+    @apply opacity-100;
+  }
+}
+
+/* Update Project Modal Styles */
+.project-header {
+  @apply space-y-2;
+}
+
+.project-meta {
+  @apply flex flex-wrap gap-4 text-sm text-gray-400;
+}
+
+.project-date {
+  @apply flex items-center gap-2;
+}
+
+.project-summary {
+  @apply bg-surface-light/50 p-4 rounded-xl;
+}
+
+.project-summary h4 {
+  @apply text-lg font-semibold text-white mb-2;
+}
+
+.project-summary p {
+  @apply text-gray-300;
+}
+
+.project-tags {
+  @apply pl-4 py-2 ; 
+  @apply space-y-3;
+}
+
+.project-tags h4 {
+  @apply text-lg font-semibold text-white;
+}
+
+.tag-list {
+  @apply flex flex-wrap gap-2;
+}
+
+.tag-item {
+  @apply px-3 py-1 rounded-full text-sm font-medium bg-surface-light/50 text-gray-300;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Update existing styles */
+.project-description {
+  @apply space-y-2;
+}
+
+.project-description h4 {
+  @apply text-lg font-semibold text-white;
+}
+
+.project-description p {
+  @apply text-gray-300 leading-relaxed;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 640px) {
+  .project-meta {
+    @apply text-xs;
+  }
+  
+  .project-summary,
+  .project-description,
+  .project-features,
+  .project-tech,
+  .project-tags {
+    @apply text-sm;
+  }
 }
