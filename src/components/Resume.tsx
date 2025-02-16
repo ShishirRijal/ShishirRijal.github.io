@@ -1,12 +1,25 @@
-import { School, Trophy, BookOpen, Briefcase, ExternalLink } from 'lucide-react';
+import { School, Trophy, BookOpen, Briefcase, ExternalLink, FileDown } from 'lucide-react';
 
 export default function Resume() {
   return (
     <article className="resume">
       <header>
         <h2 className="article-title">Resume</h2>
+        
+        {/* Resume Download Button */}
+        <a 
+          href="/assets/files/Shishir Rijal.pdf" 
+          target="_blank"
+          rel="noopener noreferrer"
+          className="resume-download-btn"
+        >
+          <div className="btn-content">
+            <FileDown className="w-5 h-5" />
+            <span>Download Resume</span>
+          </div>
+          <div className="btn-decoration"></div>
+        </a>
       </header>
-
 
        {/* Professional Experience Section */}
        <section className="timeline-section">
@@ -33,10 +46,16 @@ export default function Resume() {
             <h4 className="timeline-title">Merkos302</h4>
             <span className="timeline-period">November 2022 – March 2023 | New York, NY</span>
             <div className="timeline-text">
-              <p>Spearheaded the development of Merkos Central Project using Flutter for web and mobile platforms.</p>
-              <p>Transformed Figma designs into pixel-perfect, responsive applications.</p>
-              <p>Implemented RESTful API integration with robust error handling.</p>
-              <p>Collaborated with cross-functional teams to optimize user experience.</p>
+              <p>Led the development of the Merkos Central Project using Flutter for cross-platform mobile and web applications.</p>
+            <p>Translated Figma designs into responsive, pixel-perfect UI components.</p>
+
+            <p>Integrated RESTful APIs, implementing robust error handling and data validation.</p>
+
+            <p>Wrote unit and integration tests to ensure code quality and reliability.</p>
+
+            <p>Collaborated with cross-functional teams to optimize user experience and application performance.</p>
+
+            <p>Set up CI/CD pipelines for automated testing and deployment.</p>
             </div>
           </li>
         </ol>
@@ -171,3 +190,8 @@ export default function Resume() {
     </article>
   );
 } 
+
+
+
+
+

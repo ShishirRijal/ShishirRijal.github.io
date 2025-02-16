@@ -92,12 +92,18 @@ color: var(--accent);
 
 
 /* Sidebar */
+  
+
 .sidebar {
-  @apply bg-surface rounded-2xl p-6 backdrop-blur-lg;
-  background: var(--surface);
+  @apply bg-surface rounded-2xl p-6 overflow-hidden;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-info {
+  @apply p-6;
+  height: auto;
 }
 
 .avatar-box {
@@ -389,8 +395,15 @@ color: var(--accent);
 
 /* Mobile and Tablet styles (less than 1024px) */
 @media (max-width: 1023px) {
+  .sidebar-wrapper {
+    @apply sticky top-0 m-0;
+    height: auto;
+    max-height: none;
+  }
+
   .sidebar {
-    @apply sticky top-0 z-20;
+    @apply rounded-none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .sidebar-info {
@@ -1070,5 +1083,59 @@ color: var(--accent);
   
   .cert-name {
     @apply text-base;
+  }
+}
+
+/* Resume download button styles */
+.resume header {
+  @apply flex flex-col gap-4 mb-8;
+}
+
+.resume-download-btn {
+  @apply relative self-start px-6 py-3 rounded-xl font-medium transition-all duration-300 overflow-hidden;
+  background: linear-gradient(45deg, #FF4500, #f18810, #42e745); /* Gradient with Swift & Flutter colors */
+  background-size: 200% 200%;
+  animation: gradient-shift 5s ease infinite;
+}
+
+.btn-content {
+  @apply flex items-center gap-2 text-white relative z-10;
+}
+
+.btn-decoration {
+  @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.1)
+  );
+}
+
+.resume-download-btn:hover {
+  @apply transform -translate-y-1;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.resume-download-btn:hover .btn-decoration {
+  @apply opacity-100;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 640px) {
+  .resume-download-btn {
+    @apply w-full justify-center;
   }
 }
