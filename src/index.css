@@ -393,6 +393,14 @@ color: var(--accent);
   transform: scale(0.95);
 }
 
+
+.sidebar-wrapper {
+  @apply sticky top-8;
+  height: calc(100vh - 4rem); /* Viewport height minus top and bottom margin */
+  /* width: 320px; */
+}
+
+
 /* Mobile and Tablet styles (less than 1024px) */
 @media (max-width: 1023px) {
   .sidebar-wrapper {

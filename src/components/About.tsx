@@ -5,6 +5,7 @@ import {
   SiDocker, SiTensorflow, SiPytorch, SiGit, SiGithub,
   SiFirebase, SiAndroidstudio, SiXcode,
     SiTypescript, SiKubernetes,
+    SiOpencv,   SiLinux, SiFigma, SiSupabase,
    SiPostman
 } from "react-icons/si";
 
@@ -27,16 +28,22 @@ const skillsTop = [
   { icon: SiFastapi, name: 'FastAPI', color: 'bg-teal-500/5 hover:bg-teal-500/20 text-[#009688]' },
   { icon: SiFlask, name: 'Flask', color: 'bg-gray-500/5 hover:bg-gray-500/20 text-[#000000]' },
   { icon: SiNodedotjs, name: 'Node.js', color: 'bg-green-500/5 hover:bg-green-500/20 text-[#339933]' },
-  { icon: SiTypescript, name: 'TypeScript', color: 'bg-blue-600/5 hover:bg-blue-600/20 text-[#3178C6]' },
+  { icon: SiFlutter, name: 'Flutter Test', color: 'bg-blue-500/5 hover:bg-blue-500/20 text-[#02569B]' },
+  { icon: SiXcode, name: 'XCTest', color: 'bg-blue-500/5 hover:bg-blue-500/20 text-[#147EFB]' },
+  
 ];
+
+
+
+
 
 const skillsMiddle = [
   { icon: SiMysql, name: 'MySQL', color: 'bg-blue-800/5 hover:bg-blue-800/20 text-[#4479A1]' },
   { icon: SiPostgresql, name: 'PostgreSQL', color: 'bg-blue-400/5 hover:bg-blue-400/20 text-[#4169E1]' },
   { icon: SiMongodb, name: 'MongoDB', color: 'bg-green-500/5 hover:bg-green-500/20 text-[#47A248]' },
+  { icon: SiSupabase, name: 'Supabase', color: 'bg-green-500/5 hover:bg-green-500/20 text-[#3ECF8E]' },
   { icon: SiFirebase, name: 'Firebase', color: 'bg-yellow-500/5 hover:bg-yellow-500/20 text-[#FFCA28]' },
   { icon: SiDocker, name: 'Docker', color: 'bg-blue-500/5 hover:bg-blue-500/20 text-[#2496ED]' },
-  { icon: SiKubernetes, name: 'Kubernetes', color: 'bg-blue-600/5 hover:bg-blue-600/20 text-[#326CE5]' },
   { icon: SiTensorflow, name: 'TensorFlow', color: 'bg-orange-500/5 hover:bg-orange-500/20 text-[#FF6F00]' },
   { icon: SiPytorch, name: 'PyTorch', color: 'bg-red-500/5 hover:bg-red-500/20 text-[#EE4C2C]' },
 ];
@@ -47,8 +54,10 @@ const skillsBottom = [
   { icon: SiAndroidstudio, name: 'Android Studio', color: 'bg-green-600/5 hover:bg-green-600/20 text-[#3DDC84]' },
   { icon: SiXcode, name: 'Xcode', color: 'bg-blue-500/5 hover:bg-blue-500/20 text-[#147EFB]' },
   { icon: VscAzure, name: 'Azure', color: 'bg-blue-600/5 hover:bg-blue-600/20 text-[#0078D4]' },
-  { icon: FaAws, name: 'AWS', color: 'bg-yellow-600/5 hover:bg-yellow-600/20 text-[#FF9900]' },
   { icon: SiPostman, name: 'Postman', color: 'bg-orange-500/5 hover:bg-orange-500/20 text-[#FF6C37]' },
+  { icon: SiFigma, name: 'Figma', color: 'bg-purple-500/5 hover:bg-purple-500/20 text-[#F24E1E]' },
+ { icon: SiLinux, name: 'Linux', color: 'bg-gray-700/5 hover:bg-gray-700/20 text-[#FCC624]' },
+{ icon: SiOpencv, name: 'OpenCV', color: 'bg-green-500/5 hover:bg-green-500/20 text-[#5C3EE8]' },
 ];
 
 const SkillCard = ({ icon: Icon, name, color }: { icon: React.ElementType; name: string; color: string }) => (
@@ -303,8 +312,8 @@ export default function About() {
 
         <p>
           From mobile app development to machine learning, I love diving into new technologies and bringing ideas to life through code.
-          In my spare time, I focus on contributing to open-source projects, alongside working out, capturing
-          street photography, and writing tech content.
+          In my spare time, I try contributing to open-source projects, alongside watching movies and web series, capturing
+          photographs, and writing tech content.
         </p>
 
         <p className="font-medium text-green-500">
