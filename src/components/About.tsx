@@ -33,10 +33,6 @@ const skillsTop = [
   
 ];
 
-
-
-
-
 const skillsMiddle = [
   { icon: SiMysql, name: 'MySQL', color: 'bg-blue-800/5 hover:bg-blue-800/20 text-[#4479A1]' },
   { icon: SiPostgresql, name: 'PostgreSQL', color: 'bg-blue-400/5 hover:bg-blue-400/20 text-[#4169E1]' },
